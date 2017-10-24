@@ -5,7 +5,7 @@
 #     strategy_description: a string
 #     move: A function that returns 'c' or 'b'
 ####
-
+####AAAA
 team_name = 'E1'
 strategy_name = 'Betray'
 strategy_description = 'Always betray.'
