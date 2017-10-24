@@ -5,7 +5,7 @@
 #     strategy_description: a string
 #     move: A function that returns 'c' or 'b'
 ####
-
+####testing with Conlin
 team_name = 'E0'
 strategy_name = 'Collude'
 strategy_description = 'Always collude.'
