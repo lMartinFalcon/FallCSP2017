@@ -1,3 +1,5 @@
+import random
+import time
 ####
 # Each team's file must define four tokens:
 #     team_name: a string
@@ -6,33 +8,35 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
-    
-def move(my_history, their_history, my_score, their_score):
-    ''' Arguments accepted: my_history, their_history are strings.
-    my_score, their_score are ints.
+team_name = 'NoIdea' # Only 10 chars displayed.
+strategy_name = "Collude is Key, Let's be friends"
+strategy_description = "There is a 1% chance that we won't not not not not not not not not not not not Collude"
+def move():
+    ''' Arguments accepted: None.
     
     Make my move.
     Returns 'c' or 'b'. 
     '''
 
-    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
-    # their_history: a string of the same length as history, possibly empty. 
-    # The first round between these two players is my_history[0] and their_history[0].
-    # The most recent round is my_history[-1] and their_history[-1].
+    # Gets a random number between 1 and 100
     
-    # Analyze my_history and their_history and/or my_score and their_score.
-    # Decide whether to return 'c' or 'b'.
-    
-    return 'c'
+    chance = random.randint(1, 100)
+    if chance == 20:        # If the number is 20, then we will return c
+        time.sleep(10)
+        print 'ok'
+        time.sleep(5)
+        return 'c'
+    else:                   # If the number is not 20, then will return b
+        time.sleep(5)
+        print 'ok'
+        time.sleep(5)
+        return 'b'
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
-    Returns True or False, dpending on whether result was as expected.
+    Returns True or False, depending on whether result was as expected.
     '''
     real_result = move(my_history, their_history, my_score, their_score)
     if real_result == result:
