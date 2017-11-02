@@ -51,4 +51,3 @@ def move(their_history, their_score, my_score):
             
         print ('my score' + (str)(my_score))
         print ('your score' + (str)(their_score))
-move()
